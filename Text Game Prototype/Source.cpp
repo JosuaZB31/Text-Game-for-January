@@ -161,9 +161,9 @@ void exploreBedroom(Player& player)
 
 	if (player.seachItem("Haunted Mirror"))
 	{
-		std::cout << "Your trap the ghost in the mirror, but you need holy water to finish the job";
-		std::cout << "Check the room for holy water\n";
+		std::cout << "Your trap the ghost in the mirror, you make a cross on the mirror using the holy water\n";
 	}
+	player.addItem("Ghost");
 }
 //Game loop
 void gameLoop(Player& player)
@@ -196,6 +196,10 @@ void gameLoop(Player& player)
 		break;
 	}
 }
+void escapeManor()
+{
+
+}
 //main function
 int main()
 {
@@ -221,6 +225,11 @@ int main()
 		{
 			std::cout << "You decide to rest.Will you survive another day?\n";
 			break;
+		}
+		if (player.seachItem("Ghost"))
+		{
+			escapeManor();
+			exit(0);
 		}
 		system("cls");
 	}
