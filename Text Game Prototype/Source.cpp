@@ -200,6 +200,22 @@ void escapeManor()
 {
 
 }
+void endingEscape(Player& player)
+{
+	std::cout << "You suuccessfully escape the haunted manor with the ghost trapped in the mirror!\n";
+	player.showInventory();
+	std::cout << "You live to tell the tale of the haunted Manor. Congratulations!\n";
+}
+void endingDefeat() 
+{
+	std::cout << "You succumb to the ghostly horrors of the manor...\n";
+	std::cout << "Your adventure ends here.\n";
+}
+void endingStay() 
+{
+	std::cout << "You decide to stay in the haunted manor, never to be seen again...\n";
+	std::cout << "Perhaps you'll become one of its many restless spirits.\n";
+}
 //main function
 int main()
 {
